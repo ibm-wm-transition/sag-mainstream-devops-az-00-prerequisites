@@ -58,5 +58,6 @@ In the `secureFiles` subfolder you will find examples of the files that will be 
 - When the time comes, i.e. when you will have the actual pipelines, grant the permissions as follows:
   - `sdc.credentials.sh` is used to access Software AG Empower Download Center (aka "SDC") and is only used in the first pipeline
   - `sa.share.secrets.sh` is used to access the storage account where the product and fixes zip files are stored and is in the first two pipelines
+    - the contents of this file may be obtained from cloud shell with the script `98.produceEnvForDev.sh`
   - `acr.sp.credentials.sh` is used to access the Azure Container Registry (ACR) in all pipelines besides the first one
 - specific license files will also be uploaded as secure files, but they will depend on the contents of the pipelines. `msr-license.xml` will likely be always used
