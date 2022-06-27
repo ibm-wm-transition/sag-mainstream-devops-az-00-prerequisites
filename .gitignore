@@ -1,1 +1,4 @@
 setEnv.sh
+acr.sp.credentials.sh
+sa.share.secrets.sh
+sdc.credentials.sh

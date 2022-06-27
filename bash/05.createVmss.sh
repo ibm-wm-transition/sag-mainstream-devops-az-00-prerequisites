@@ -12,7 +12,7 @@ az vmss create \
 --vm-sku Standard_DS2_v2 \
 --storage-sku StandardSSD_LRS \
 --authentication-type SSH \
---instance-count 2 \
+--instance-count 0 \
 --disable-overprovision \
 --upgrade-policy-mode manual \
 --single-placement-group false \
@@ -21,4 +21,4 @@ az vmss create \
 --vnet-name $SAG_AZ_VNET_NAME \
 --subnet $SAG_AZ_VM_SUBNET_NAME
 
-echo "Created the subnet $SAG_AZ_VM_SUBNET_NAME, result $?"
+echo "Created the VMSS $SAG_AZ_VM_SUBNET_NAME, result $?"
