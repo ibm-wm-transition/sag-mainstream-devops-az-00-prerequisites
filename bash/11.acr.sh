@@ -8,6 +8,7 @@ az acr create \
   --name $SAG_AZ_ACR_NAME \
   --resource-group "$SAG_AZ_RG_NAME" \
   --subscription "$SAG_AZ_SUBSCRIPTION_ID" \
-  --sku Basic
+  --sku Basic \
+  --location $SAG_AZ_LOCATION
 
 echo "Created the Azure Container Registry $SAG_AZ_ACR_NAME, result $?"

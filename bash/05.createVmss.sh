@@ -19,6 +19,7 @@ az vmss create \
 --platform-fault-domain-count 1 \
 --load-balancer "" \
 --vnet-name $SAG_AZ_VNET_NAME \
---subnet $SAG_AZ_VM_SUBNET_NAME
+--subnet $SAG_AZ_VM_SUBNET_NAME \
+--location $SAG_AZ_LOCATION
 
 echo "Created the VMSS $SAG_AZ_VM_SUBNET_NAME, result $?"
