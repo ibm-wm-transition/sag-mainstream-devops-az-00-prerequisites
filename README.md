@@ -6,6 +6,7 @@
       - [Prerequisites](#prerequisites)
       - [Operations](#operations)
         - [Option 1: Bash cloud shell with mount of the cloud share](#option-1-bash-cloud-shell-with-mount-of-the-cloud-share)
+        - [Option 2: Bash cloud shell without mounting the cloud share](#option-2-bash-cloud-shell-without-mounting-the-cloud-share)
       - [Other Options](#other-options)
   - [Secure files](#secure-files)
 
@@ -43,6 +44,41 @@ This repository provides a set of convenient scripts that you can use to prepare
     - `az ad sp list --display-name "DevOps - TrainingSP - 9" -o table`
 - Execute the shell scripts in the given order (00 to 11) or use directly the more convenient `createAll.sh`
 - Eventually execute `98.produceEnvForDev.sh`. Copy the three "export" resulting lines into a private file on your PC. These lines will be saved in a secure file in the DevOps project.
+
+##### Option 2: Bash cloud shell without mounting the cloud share
+
+- Open a browser to [Azure Portal](https://portal.azure.com/)
+- Open a cloud shell with "bash".
+- Clone this repository into a folder of your choice.
+
+    ![cloud shell bash git clone](./imgs/cloudshellbashgitclone.png)
+
+    ```bash
+    cd clouddrive
+    git clone -b main --single-branch https://github.com/SoftwareAG/sag-mainstream-devops-az-00-prerequisites.git
+    cd sag-mainstream-devops-az-00-prerequisites
+    ```
+
+- Navigate to folder "bash" and copy the file ```setEnvExample.sh``` into ```setEnv.sh```
+
+    ```bash
+    cd bash
+    cp setEnvExample.sh setEnv.sh
+    ```
+
+- Edit ```setEnv.sh``` and set the values as per your environment
+
+    ```bash
+    vi setEnv.sh
+    ```
+    **Note:** Watch the naming constraints, e.g. SA names must be max 24 chars long and lowercase. Keep the MY_PREFIX short, lowercase and without spceial characters. Eventually shorten the names that concatenate it.
+
+- Execute the shell scripts in the given order (00 to 11) or use directly the more convenient ```createAll.sh```. Verify the file permissions before executing it.
+- Eventually execute ```98.produceEnvForDev.sh```. Copy the three "export" resulting lines into a private file on your PC. These lines will be saved in a secure file in the DevOps project.
+
+```NOTE: Azure Cloud Shell comes with folder "clouddrive" by default. After executing "00.assureLocalSshKeys.sh" verify link is created for folder "clouddrive/.ssh"```  
+
+![link](./imgs/link.png)
 
 #### Other Options
 
