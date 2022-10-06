@@ -97,3 +97,6 @@ In the `secureFiles` subfolder you will find examples of the files that will be 
     - the contents of this file may be obtained from cloud shell with the script `98.produceEnvForDev.sh`
   - `acr.sp.credentials.sh` is used to access the Azure Container Registry (ACR) in all pipelines besides the first one
 - specific license files will also be uploaded as secure files, but they will depend on the contents of the pipelines. `msr-license.xml` will likely be always used
+
+______________________
+These tools are provided as-is and without warranty or support. They do not constitute part of the Software AG product suite. Users are free to use, fork and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the master project.
