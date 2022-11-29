@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#Changes
+#Srini: 23.11 : Added --https-only true, required for updated policy to enforce secure transfer only.
+
 . ./setEnv.sh
 
 echo "Creating the storage account $SAG_AZ_SA_NAME..."
@@ -11,6 +14,7 @@ az storage account create \
   --location $SAG_AZ_LOCATION \
   --sku Standard_LRS \
   --enable-large-file-share \
+  --https-only true \
   --tags "Purpose=DevOps"
 
 echo "Created the storage account $SAG_AZ_SA_NAME, result $?"
