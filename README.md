@@ -10,7 +10,7 @@
       - [Other Options](#other-options)
   - [Secure files](#secure-files)
 
-This repository provides a set of convenient scripts that you can use to prepare Azure Cloud compute resorces to support the mainstream DevOps pipelines used in the `sag-mainstream-devops-az-*` repositories.
+This repository provides a set of convenient scripts that you can use to prepare Azure Cloud compute resources to support the mainstream DevOps pipelines used in the `sag-mainstream-devops-az-*` repositories.
 
 ## Azure Resources
 
@@ -39,7 +39,7 @@ This repository provides a set of convenient scripts that you can use to prepare
   - Example: [how to mount the share on Linux](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-linux?tabs=smb311)
 - Copy the folder "bash" of this repository onto the share in a convenient location (e.g. `z:\az-pipe-prerequisites\bash`)
 - Inside the above folder copy `setEnvExample.sh` into `setEnv.sh`
-- Edit `setEnv.sh` and set the values of your enviornment
+- Edit `setEnv.sh` and set the values of your environment
   - If you do not know the App ID of your service principal, use the following command to obtain it
     - `az ad sp list --display-name "DevOps - TrainingSP - 9" -o table`
 - Execute the shell scripts in the given order (00 to 11) or use directly the more convenient `createAll.sh`
@@ -71,7 +71,7 @@ This repository provides a set of convenient scripts that you can use to prepare
     ```bash
     vi setEnv.sh
     ```
-    **Note:** Watch the naming constraints, e.g. SA names must be max 24 chars long and lowercase. Keep the MY_PREFIX short, lowercase and without spceial characters. Eventually shorten the names that concatenate it.
+    **Note:** Watch the naming constraints, e.g. SA names must be max 24 chars long and lowercase. Keep the MY_PREFIX short, lowercase and without special characters. Eventually shorten the names that concatenate it.
 
 - Execute the shell scripts in the given order (00 to 11) or use directly the more convenient ```createAll.sh```. Verify the file permissions before executing it.
 - Eventually execute ```98.produceEnvForDev.sh```. Copy the three "export" resulting lines into a private file on your PC. These lines will be saved in a secure file in the DevOps project.
@@ -90,7 +90,7 @@ In the `secureFiles` subfolder you will find examples of the files that will be 
 
 - Copy every `example.*.sh` into `*.sh` (i.e. remove the "Example." prefix from the name)
 - Edit the files and declare your own environment specific keys.
-- Upload the files in the Piepelines->Library->Secure files section maintaining the names. These names are refered to in the provided azure-pipeline.yml files.
+- Upload the files in the Pipelines->Library->Secure files section maintaining the names. These names are referred to in the provided `azure-pipeline.yml` files.
 - When the time comes, i.e. when you will have the actual pipelines, grant the permissions as follows:
   - `sdc.credentials.sh` is used to access Software AG Empower Download Center (aka "SDC") and is only used in the first pipeline
   - `sa.share.secrets.sh` is used to access the storage account where the product and fixes zip files are stored and is in the first two pipelines
