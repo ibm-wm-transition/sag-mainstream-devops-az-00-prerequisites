@@ -55,7 +55,7 @@ This repository provides a set of convenient scripts that you can use to prepare
 
     ```bash
     cd clouddrive
-    git clone -b main --single-branch https://github.com/SoftwareAG/sag-mainstream-devops-az-00-prerequisites.git
+    git clone -b main --depth 1 https://github.com/SoftwareAG/sag-mainstream-devops-az-00-prerequisites.git
     cd sag-mainstream-devops-az-00-prerequisites
     ```
 
