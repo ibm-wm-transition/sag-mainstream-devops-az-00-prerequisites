@@ -29,3 +29,5 @@ export SAG_AZ_SA_SHARE_NAME=azdevops${MY_PREFIX}imagessashare
 
 # ACR name must contain only small caps
 export SAG_AZ_ACR_NAME=azdevops${MY_PREFIX}acr
+
+export SAG_AZ_VAULT_NAME=azdevops${MY_PREFIX}vault

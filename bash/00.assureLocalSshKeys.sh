@@ -4,7 +4,7 @@
 
 pushd . > /dev/null
 
-cd ~
+cd ~ || exit 1
 
 if [ -f .ssh/id_rsa ]; then
   echo "SSH keys already available"
@@ -24,4 +24,4 @@ else
   fi
 fi
 
-popd > /dev/null
+popd > /dev/null || exit 2
