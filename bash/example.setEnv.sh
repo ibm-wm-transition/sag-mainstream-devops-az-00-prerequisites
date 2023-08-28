@@ -22,7 +22,9 @@ export SAG_AZ_VNET_NAME="${MY_PREFIX}AgentsNSGVnet"
 export SAG_AZ_DEFAULT_CIDR='10.0.0.0/16'
 export SAG_AZ_VM_SUBNET_NAME="${MY_PREFIX}AgentsSubnet"
 export SAG_AZ_VMSS_NAME="${MY_PREFIX}AgentsVmss"
-export SAG_AZ_VMSS_IMAGE="Canonical:0001-com-ubuntu-confidential-vm-focal:20_04-lts-gen2:latest"
+# older image, it seems "gen2" has been substituted with "cvm"
+# export SAG_AZ_VMSS_IMAGE="Canonical:0001-com-ubuntu-confidential-vm-focal:20_04-lts-gen2:latest"
+export SAG_AZ_VMSS_IMAGE="Canonical:0001-com-ubuntu-confidential-vm-focal:20_04-lts-cvm:latest"
 # storage account name must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 export SAG_AZ_SA_NAME="${MY_PREFIX}imagessa"
 export SAG_AZ_SA_SHARE_NAME="${MY_PREFIX}imagessashare"
