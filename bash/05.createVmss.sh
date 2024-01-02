@@ -13,6 +13,7 @@ az vmss create \
 --storage-sku StandardSSD_LRS \
 --authentication-type SSH \
 --instance-count 0 \
+--orchestration-mode uniform \
 --disable-overprovision \
 --upgrade-policy-mode manual \
 --single-placement-group false \
