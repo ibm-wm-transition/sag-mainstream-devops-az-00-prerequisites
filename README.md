@@ -1,4 +1,6 @@
-# Software AG Mainstream DevOps for Integration - Azure DevOps Tutorial Prerequisites
+# MOVING - Software AG Mainstream DevOps for Integration - Azure DevOps Tutorial Prerequisites
+
+# This repo will be moved away from the Software AG organization
 
 - [Software AG Mainstream DevOps for Integration - Azure DevOps Tutorial Prerequisites](#software-ag-mainstream-devops-for-integration---azure-devops-tutorial-prerequisites)
   - [Azure Resources](#azure-resources)
